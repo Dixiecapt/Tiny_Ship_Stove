@@ -1,4 +1,4 @@
-# Tiny Stove 0.2.3
+# Tiny Stove 0.2.4
 
 *by Dixiecapt*
 
@@ -83,6 +83,10 @@ are cast iron again.
 
 ## Version history
 
+- **0.2.4:** fixes 0.2.3, which failed to build the stove on every machine
+  and put a plain Aestrin stove in its place (Exocet): the new strip of
+  inherited shapes was taking the stove's own cook place and fire with them.
+  Do not run 0.2.3.
 - **0.2.3:** works with Better Tables 0.1.0. That version hangs four leg
   shapes under the stock Aestrin stove; the tiny stove is a copy of that
   stove and was carrying the legs too, 26 cm through the deck, so it was
