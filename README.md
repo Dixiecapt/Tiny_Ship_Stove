@@ -1,4 +1,4 @@
-# Tiny Stove 0.2.0
+# Tiny Stove 0.2.1
 
 *by Dixiecapt*
 
@@ -68,6 +68,14 @@ are cast iron again.
   the game (window opened, top cleared, rail and chimney added).
 - Cooking, fire, smoke and sound: the game's own Aestrin stove.
 
+- **Log > Report each stove shape:** for bug reports. The first three
+  stoves to appear write one line each to the log saying where their
+  picture, pointing box and physics body are. Switch off once all is well.
+
 ## Version history
 
+- **0.2.1:** the stove's physics and pointing shape is now one plain box
+  instead of a hull built on each PC (reports of the pointer landing beside
+  the stove, a red outline in the hand, and the stove or ship thrashing);
+  a switchable log line to help chase anything left.
 - **0.2.0:** first shared release.
