@@ -1,12 +1,14 @@
-# Tiny Stove 0.2.1
+# Galley Range 0.1.0
 
 *by Dixiecapt*
 
-A small cast iron ship's stove for small boats: the classic kind with a
-flat top for one pot, a glass door with the fire burning behind it, a rail
-round the top so the pot stays put at sea, and a capped stovepipe. A new
-item for sale beside the Aestrin stoves at the Fort. It replaces nothing:
-every stock stove is left as it is.
+A man-of-war's galley stove for the largest ships: the Brodie stove of the
+1780s. A riveted iron range with two copper boilers set into the top at the
+back, two stove eyes in front of them, an open fire at the front with a
+spit turned by a chain and a gridiron over the coals, a hanging bar under
+the hood where the smoke rises, and a tall flue with a cowl that turns away
+from the wind. Two new items, the range and the copper boiler. Nothing of
+the game's is replaced.
 
 ## Requirements
 
@@ -18,64 +20,120 @@ Optional: **Configuration Manager** (F1) to change settings in the game.
 
 Unzip into `BepInEx\plugins\`. You should get:
 
-    BepInEx\plugins\TinyStove\TinyStove.dll
-    BepInEx\plugins\TinyStove\tinystove
+    BepInEx\plugins\GalleyRange\GalleyRange.dll
+    BepInEx\plugins\GalleyRange\galleyrange
 
-Both files must sit together: `tinystove` is the stove's model. With a mod
+Both files must sit together: `galleyrange` is the model. With a mod
 manager, just install the package.
 
-## The stove
+## Where to buy it
 
-- **Where to buy it:** the Fort (island 15), beside the two stock Aestrin
-  stoves, at the Aestrin stove's price in the local coin.
-- **How it works:** just like the Aestrin stove. It cooks at the same
-  strength and holds three pieces of firewood. Set it on a deck and nail it
-  down with the hammer like any stove.
-- **One pot on top.** The soup pot or the kettle sits on the flat top,
-  handles across, inside the rail.
-- **Fire behind glass.** The firewood lies in the firebox and burns behind
-  the door's window, with a warm glow on the deck in front of it and smoke
-  from the chimney cap.
-- **Size:** about 71 cm tall, 58 cm deep counting the door handle, and 44 cm
-  wide. That is half the floor space of the Emerald stove, so it fits
-  small boats.
+At the **Fort** (island 15), along the row from the two stock Aestrin
+stoves: the range, then two copper boilers beside it.
 
-## Settings
+| Item | Price (before the local rate) | Weight | Size |
+|---|---|---|---|
+| Galley range | 7,500 | 400 kg | 1.8 m wide, 2.0 m deep, 1.8 m tall, flue above that |
+| Copper boiler | 600 | 8 kg empty | 48 cm across, 49 cm tall |
 
-All of these are in F1, or in
-`BepInEx\config\com.dixiecapt.sailwind.tinystove.cfg`.
+For comparison the Aestrin stove is 2,600 and the big pot 250.
 
-- **Stove > Chimney length (m):** how tall the pipe stands above the stove,
-  from 0.2 to 2.5 m. It changes every cast iron stove at once, so you can
-  raise it to clear a cabin roof or lower it under a boom.
-- **Shop > Sell at the Fort:** switches the Fort's stove spot on or off.
-- **Shop > Spot along the stove row (m)** and **Spot sideways (m):** move
-  where the stove stands for sale, if another mod has put something there.
+## Setting it up
+
+1. **Have your ship at the Fort before you buy.** Carry the range aboard
+   and set it down; it is big and heavy, carried in both arms like the
+   stock stoves. Do not leave it on the quay and sail off for a ship: the
+   game throws away anything bought and left ashore once you are 600 m
+   away. That is the game's own rule for every item, not the mod's.
+2. **Nail it down** with the hammer, like any stove.
+3. **The fire lights only on a large ship.** With the range nailed down,
+   put firewood in the firebox at the front. If the ship is too small, or
+   the range is loose, the firewood will not go in and the range's name
+   says why when you look at it: *nail it down first*, *needs a ship*, or
+   *needs a larger ship* with that ship's name and weight.
+   - Allowed ships: any whose name holds one of the words in F1 **Ships >
+     Only on these ships** (to start: Chronian, Leopard, Clipper, Gloriana),
+     or any ship whose hull weighs more than F1 **Or any ship heavier than
+     (kg)** (10,000 to start; the game's medium hulls weigh 5 to 11 tonnes,
+     its large ones 12 to 14; cargo does not count).
+   - The log (`BepInEx\LogOutput.log`) names every ship that was refused,
+     so you can add a name to the list.
+4. Set the two copper boilers into the two copper rims on the top at the
+   back. They snap in.
+
+## Cooking
+
+The range is one stove with seven cook places. Each place does its own job:
+
+| Place | Where | What goes there | How it cooks |
+|---|---|---|---|
+| Two boiler wells | the copper rims at the back | copper boilers | like the Aestrin stove (cooking 0.5) |
+| Two stove eyes | the flat top in front of the wells | the game's pot, big pot or kettle | like the Aestrin stove |
+| The spit | the rod across the front | fish, meat, any loose food | like the Aestrin stove; it turns while the fire burns, and the food turns with it |
+| The gridiron | over the coals behind the front bars | loose food | like the Aestrin stove |
+| The smoke bar | the hooks under the hood lip | loose food | gently, and it smokes it, like the game's smoking racks |
+
+- **Firewood:** the firebox holds 6 pieces (3 to 12 in F1). One fire heats
+  every place.
+- **Putting things on:** hold the item and click the range. A boiler goes
+  to a well, a pot or kettle to an eye, loose food to the spit, the
+  gridiron or the smoke bar: whichever free place is nearest where you are
+  looking. You can also just set a thing down on its place.
+- **The copper boiler** holds 60 units of water (20 to 120 in F1); the
+  game's big pot holds 20. Fill it from water bottles and put food in, as
+  with any pot. **To serve:** hold an ordinary pot or kettle and click the
+  boiler; it fills from the boiler, soup and all, as much as it takes. You
+  cannot drink straight from the boiler: it is too big to tip up.
+- Smoked food is made on the smoke bar the same way the game's smoking
+  racks make it. There is no new "grilled" state: the spit and gridiron
+  cook food, which is what grilling is in this game.
+
+## The flue and cowl
+
+- **Range > Chimney length (m):** how tall the flue stands above the hood,
+  0.3 to 3.5 m, on every galley range at once, so it can clear a deck above
+  or be lowered under a beam.
+- **Range > Cowl turns from the wind:** on, the cowl's mouth turns away
+  from the wind by itself. Off, it points where **Cowl facing (degrees)**
+  says (0 = the front of the range).
+- Smoke comes out of the cowl's mouth.
+
+## Settings (F1)
+
+All in F1, or in `BepInEx\config\com.dixiecapt.sailwind.galleyrange.cfg`.
+
+- **Range:** chimney length, cowl turning and facing, spit turns, firewood
+  it holds, price.
+- **Ships:** the ship name list, the weight rule, and *Also ashore* to let
+  the fire light in a house or on a quay too.
+- **Boiler:** capacity, price.
+- **Shop:** sell at the Fort, how many boilers, where the spot is along the
+  stove row and sideways. The mod looks further along the row by itself
+  if the first spot lands outside the shop.
+
+Firewood, price and boiler capacity are read when the game starts.
 
 ## Taking it out
 
-**A save with a cast iron stove in it needs this mod to load**, the same as
-any mod that adds new items. Before you remove the mod, sell or throw away
-every cast iron stove, then save.
+**A save with a galley range or a copper boiler in it needs this mod to
+load**, the same as any mod that adds new items. Before you remove the mod,
+sell or throw away every range and boiler, then save.
 
-If only the `tinystove` model file goes missing, your stoves come back as
-plain Aestrin stoves so the save still loads. Put the file back and they
-are cast iron again.
+If only the `galleyrange` model file goes missing, your range comes back as
+a plain Aestrin stove and your boilers as big pots, so the save still
+loads. Put the file back and they are themselves again.
 
 ## Credits
 
-- Stove model: a free cast iron stove model from TurboSquid, cut down for
-  the game (window opened, top cleared, rail and chimney added).
-- Cooking, fire, smoke and sound: the game's own Aestrin stove.
-
-- **Log > Report each stove shape:** for bug reports. The first three
-  stoves to appear write one line each to the log saying where their
-  picture, pointing box and physics body are. Switch off once all is well.
+- Stove model: *Brodie Stove* by **Uhlan**, licensed under Creative
+  Commons Attribution-NonCommercial 4.0
+  (https://creativecommons.org/licenses/by-nc/4.0/). Changed for the
+  game: the lids taken off for the lift-out boilers, copper rims, a
+  gridiron and a smoke bar added, the cowl set on the flue, the mesh
+  thinned.
+- Cooking, fire, smoke and sounds: the game's own Aestrin stove and big
+  pot.
 
 ## Version history
 
-- **0.2.1:** the stove's physics and pointing shape is now one plain box
-  instead of a hull built on each PC (reports of the pointer landing beside
-  the stove, a red outline in the hand, and the stove or ship thrashing);
-  a switchable log line to help chase anything left.
-- **0.2.0:** first shared release.
+- **0.1.0:** first build.
