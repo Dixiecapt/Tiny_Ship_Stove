@@ -1,3 +1,5 @@
+> **The Tiny Ship Stove now lives in [Better Stoves](https://github.com/Dixiecapt/Better-Stoves/releases/latest)**, with four more stoves and copper boilers. Your tiny stoves carry straight over: remove Tiny Stove first, then install Better Stoves.
+
 # Tiny Stove 0.2.4
 
 *by Dixiecapt*
